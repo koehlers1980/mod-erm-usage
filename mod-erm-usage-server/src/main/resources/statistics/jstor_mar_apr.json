@@ -1,0 +1,15 @@
+{
+  "agreementId": "jstor170-0000-0000-0000-000000000000",
+  "usageDataProviderId": "jstorcou-nter-0000-0000-000000000000",
+  "statistics":
+   [
+    {
+      "month": "2017-03",
+      "sumFullTextPDF": 13420
+    },
+    {
+      "month": "2017-04",
+      "sumFullTextPDF": 11608
+    }
+  ]
+}

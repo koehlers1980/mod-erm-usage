@@ -1,0 +1,27 @@
+{
+  "agreementId": "cambridg-e170-0000-0000-000000000000",
+  "usageDataProviderId": "cambridg-ecou-nter-0000-000000000000",
+  "statistics":
+   [
+    {
+      "month": "2017-01",
+      "sumFullTextPDF": 994
+    },
+    {
+      "month": "2017-02",
+      "sumFullTextPDF": 976
+    },
+    {
+      "month": "2017-03",
+      "sumFullTextPDF": 994
+    },
+    {
+      "month": "2017-04",
+      "sumFullTextPDF": 791
+    },
+    {
+      "month": "2017-05",
+      "sumFullTextPDF": 724
+    }
+  ]
+}

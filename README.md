@@ -58,7 +58,33 @@ $ curl -w '\n' -X POST -D - -H "Content-type: application/json" -d @DockerDeploy
 ### Activate module for tenant
 
 ```
-$ curl -w '\n' -X POST -D - -H "Content-type: application/json" -d '{ "id": "mod-erm-usage-1.0.0"}' http://localhost:9130/_/proxy/tenants/diku/modules
+$ curl -w '\n' -X POST -D - -H "Content-type: application/json" -d '{ "id": "mod-erm-usage-2.0.0-SNAPSHOT"}' http://localhost:9130/_/proxy/tenants/diku/modules
+```
+
+## Statistics
+
+`StatisticsAPI.java` contains a mocked API to fetch statistics about an agreement. The type of statistics is _cumulative access per time_. The following five queries are implemented:
+
+* `/statistics/cumulative-access?agreementId=annualre-view-s170-0000-000000000000&udpId=annualre-view-scou-nter-000000000000&start=2017-01&end=2017-12`
+* `/statistics/cumulative-access?agreementId=cambridg-e170-0000-0000-000000000000&udpId=cambridg-ecou-nter-0000-000000000000&start=2017-01&end=2017-12`
+* `/statistics/cumulative-access?agreementId=cambridg-e170-0000-0000-000000000000&udpId=cambridg-ecou-nter-0000-000000000000&start=2017-01&end=2017-05`
+* `/statistics/cumulative-access?agreementId=jstor170-0000-0000-0000-000000000000&udpId=jstorcou-nter-0000-0000-000000000000&start=2017-01&end=2017-12`
+* `/statistics/cumulative-access?agreementId=jstor170-0000-0000-0000-000000000000&udpId=jstorcou-nter-0000-0000-000000000000&start=2017-03&end=2017-04`
+
+The API returns some fake data about the count of cumulative full text PDF accesses of the resources of a certain agreement per month, e.g.:
+
+```json
+{
+  "agreementId" : "jstor170-0000-0000-0000-000000000000",
+  "usageDataProviderId" : "jstorcou-nter-0000-0000-000000000000",
+  "statistics" : [ {
+    "month" : "2017-03",
+    "sumFullTextPDF" : 13420
+  }, {
+    "month" : "2017-04",
+    "sumFullTextPDF" : 11608
+  } ]
+}
 ```
 
 ## Additional information

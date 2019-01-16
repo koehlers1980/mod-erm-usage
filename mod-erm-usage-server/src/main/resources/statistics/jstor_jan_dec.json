@@ -1,0 +1,55 @@
+{
+  "agreementId": "jstor170-0000-0000-0000-000000000000",
+  "usageDataProviderId": "jstorcou-nter-0000-0000-000000000000",
+  "statistics":
+   [
+    {
+      "month": "2017-01",
+      "sumFullTextPDF": 12414
+    },
+    {
+      "month": "2017-02",
+      "sumFullTextPDF": 11742
+    },
+    {
+      "month": "2017-03",
+      "sumFullTextPDF": 13420
+    },
+    {
+      "month": "2017-04",
+      "sumFullTextPDF": 11608
+    },
+    {
+      "month": "2017-05",
+      "sumFullTextPDF": 14290
+    },
+    {
+      "month": "2017-06",
+      "sumFullTextPDF": 12814
+    },
+    {
+      "month": "2017-07",
+      "sumFullTextPDF": 14433
+    },
+    {
+      "month": "2017-08",
+      "sumFullTextPDF": 12617
+    },
+    {
+      "month": "2017-09",
+      "sumFullTextPDF": 9441
+    },
+    {
+      "month": "2017-10",
+      "sumFullTextPDF": 10980
+    },
+    {
+      "month": "2017-11",
+      "sumFullTextPDF": 13103
+    },
+    {
+      "month": "2017-12",
+      "sumFullTextPDF": 10353
+    }
+  ]
+}

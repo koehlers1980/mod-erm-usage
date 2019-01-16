@@ -1,0 +1,51 @@
+#%RAML 1.0
+title: Usage Data Provider Statistics
+version: v1
+baseUri: http://localhost/mod-erm-usage
+
+documentation:
+  - title: mod-erm-usage API
+    content: This documents the API calls that can be made to query statistics from a usage data provider
+
+types:
+  cumulativeAccess: !include schemas/statistics/cumulativeaccess.json
+  errors: !include ./raml-util/schemas/errors.schema
+
+traits:
+  validate: !include ./raml-util/traits/validation.raml
+
+/statistics:
+  displayName: Central endpoint to fetch statistics
+  /cumulative-access:
+    displayName: Fetch statistics about cumulative access per month
+    get:
+      queryParameters:
+        agreementId:
+          type: string
+          required: true
+        udpId:
+          type: string
+          required: true
+        start:
+          type: string
+          required: true
+        end:
+          type: string
+          required: true
+      responses:
+        200:
+          description: "Returns item with a given ID"
+          body:
+            application/json:
+              type: cumulativeAccess
+        404:
+          description: "Item with a given ID not found"
+          body:
+            text/plain:
+              example: |
+                "not found"
+        500:
+          description: "Internal server error, e.g. due to misconfiguration"
+          body:
+            text/plain:
+              example: "internal server error, contact administrator"

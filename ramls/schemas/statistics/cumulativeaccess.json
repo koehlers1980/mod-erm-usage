@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Cumulative access per time",
+  "type": "object",
+  "properties": {
+    "agreementId": {
+      "type": "string"
+    },
+    "usageDataProviderId": {
+      "type": "string"
+    },
+    "statistics": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string"
+          },
+          "sumsFullTextPDF": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
