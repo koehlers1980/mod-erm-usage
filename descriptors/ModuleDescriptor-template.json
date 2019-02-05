@@ -163,10 +163,7 @@
           "methods": [
             "GET"
           ],
-          "pathPattern": "/statistics/cumulative-access",
-          "permissionsRequired": [
-            "statistics.get"
-          ]
+          "pathPattern": "/statistics/cumulative-access"
         }
       ]
     },
